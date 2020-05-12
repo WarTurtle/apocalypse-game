@@ -84,12 +84,18 @@ function drawEverything(state) {
 	
 	window.requestAnimationFrame(gameLoop);
 
-		    // Clear the canvas
-	    context.clearRect(0, 0, 500, 550);
+	time = Date.now();
+	delay = 13
+	
+	// Clear the canvas
+	while(Date.now()-time<delay){
+	}
 
+	    context.clearRect(0, 0, 500, 550);
 backdrop.fillStyle = "#997864";
     context.fillRect(0, 0, 500, 500);
 
+	
 	drawPoly([ 30,30, 50,20, 100,40, 150,70, 160,90, 150,130, 120,160, 60,100, 20,40],
 	 urban_color, "City", [80, 70], "white");
 drawPoly([ 490,490, 480,270, 300,300, 270,460, 400,490 ],
@@ -98,7 +104,6 @@ drawPoly([ 50,450, 200,460, 200,200, 50,300, 40,450  ],
 	 forest_color, "Forest", [80, 370]);
 drawPoly([ 500,0, 450,0, 230,200, 220,500, 270,500, 270,270, 500,50 ],
 	 river_color, "River", [350, 150]);
-	
 	rabbit1.update();
 	rabbit1.render();
 	rabbit2.update();
